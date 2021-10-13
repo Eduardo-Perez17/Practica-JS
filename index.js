@@ -1,17 +1,26 @@
 // Escriba un algoritmo para cobrar un cheque genérico en un banco
+// VALIDAR QUE SE EL USUARIO CON UNA CONTRASE:A
 
-let money = prompt('cuanto dinero tiene?')
-document.write(money)
+let money = parseInt(prompt('cuanto dinero tienes'));
 
 const remove = document.getElementById('remove')
 const add = document.getElementById('add')
+alert(`tienes en la cuenta ${money}`)
 
 remove.addEventListener('click', ()=>{
-  let removeMoney = prompt('cuanto desea retirar');
-  document.write(`${removeMoney - money}. Espere por favor 5 segundos`);
-
-  let timerRemoveMoney = ()=> {
-    javascript.history.go(-1)
+  let removeMoney = parseInt(prompt('Cuanto desea retirar'));
+  if(money >= removeMoney) {
+    alert(`Le quedan ${money - removeMoney}`);
+        console.log(removeMoney)
+  } else {
+    alert('no tienes plata suficiente jaja mmgvo pobre')
   }
-    setTimeout(timerRemoveMoney, 5000) 
-  })
+})
+
+
+// condicional
+// let calc = (resOne, resTwo) => {
+//   return resOne - resTwo
+// }
+// calc(money, removeMoney)
+// console.log(calc)
