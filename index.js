@@ -17,6 +17,17 @@ remove.addEventListener('click', ()=>{
   }
 })
 
+add.addEventListener('click', ()=>{
+  let addMoney = parseInt(prompt('Cuanto desea añadir'));
+  if(addMoney > 3000) {
+    alert(`Usted no puede sacar mas 2999, no puede sacar ${addMoney}`);
+  } else if (addMoney < 100){
+    alert('no puedes sacar menos de 100')
+  } else {
+    alert('Gracias por usar el banco para meter plata')
+    money + addMoney
+  }
+})
 
 // condicional
 // let calc = (resOne, resTwo) => {
